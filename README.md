@@ -19,8 +19,9 @@ If you run into any issues when running the code please contact Klaus Wimmer (wi
 
 We have implemented two spiking neural networks of perceptual decision making.
 
-1. Network of leaky integrate-and fire neurons with sparse, random connectivity (probability of connection between neurons is 0.1) and current-based synapses with exponential decay. These simulations can be found in ./simulation/sparse_network/ 
-2. Network of leaky integrate-and fire neurons with all-to-all connectivity and conductance-based synapses with AMPA, GABA and NMDA receptor dynamics. These simulations can be found in 'Wang2002_network'.
+1. Network of leaky integrate-and fire neurons with sparse, random connectivity (probability of connection between neurons is 0.1) and current-based synapses with exponential decay. These simulations can be found in [](simulation/sparse_network) and results are shown in Fig. 5 of Prat-Ortega et al., 2021.
+2. Network of leaky integrate-and fire neurons with all-to-all connectivity and conductance-based synapses with AMPA, GABA and NMDA receptor dynamics. These simulations can be found in [](simulation/Wang2002_network) and results are shown in Suppl. Fig. 4 of Prat-Ortega et al., 2021.
 
 ## Running simulations
 
+The Python scripts run a single trial and save the results to a file (see start_single_trials.sh). A single simulation run will typically take a few seconds. Multiple trials, as necessary for estimating psychometric curves and psychophysical kernels, can be simulated by running the Python scripts in parallel (e.g. on a cluster). The most basic way of parallelization is to start multiple proceses, as illustrated in the included shell scripts. Note that these scripts are included for illustrative purposes and have to be adapted to the available computer infrastructure. 
